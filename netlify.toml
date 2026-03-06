@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/p/*"
+  to = "/product.html"
+  status = 200
+  
