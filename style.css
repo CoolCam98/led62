@@ -4,11 +4,12 @@
    =========================================== */
 
    
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap');
 @font-face {
   font-family: 'Varino';
-  src: url('assets/fonts/Varino.woff2') format('woff2'),
-       url('assets/fonts/Varino.woff') format('woff');
+  src: url('assets/fonts/Varino.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 /* ---- Variables ---- */
 :root {
@@ -127,7 +128,7 @@ select:focus-visible {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.88);
+  color: rgb(255, 255, 255);
   border-radius: var(--radius);
   transition: color var(--transition), background var(--transition);
 }

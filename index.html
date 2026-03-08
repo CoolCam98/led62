@@ -61,8 +61,12 @@
     }
   }
   </script>
-
+  <link rel="preload" as="image" href="assets/logos/lumi-web-banner.png">
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
 
@@ -113,7 +117,12 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="assets/photos/dallas-acrylic.png" alt="Custom laser-engraved acrylic LED night light" width="600" height="600" />
+            <img
+              src="assets/photos/dallas-acrylic.webp"
+              alt="Custom LED night light"
+              fetchpriority="high"
+              loading="eager"
+            />
         </div>
         </div>
     </div>
@@ -180,7 +189,7 @@
               />
               <span class="ba-arrow" aria-hidden="true">→</span>
               <img
-                src="assets/photos/car-lumi.png"
+                src="assets/photos/car-lumi.webp"
                 alt="Finished custom LED light engraved with the car photo"
                 width="200" height="200" loading="lazy"
                 style="width:200px; height:auto;"
