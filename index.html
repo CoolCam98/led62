@@ -9,19 +9,16 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.led62.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://www.led62.com/" />
   <meta property="og:title"       content="HOME | LED62 | Custom LED Lights" />
   <meta property="og:description" content="Custom laser-engraved acrylic Lumi LED lights made from your photos, logos, or designs. 16-color remote. Plant City, FL." />
   <meta property="og:site_name"   content="LED62" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="LED62 | Custom Acrylic LED Lights" />
   <meta name="twitter:description" content="Turn any photo, logo, or design into a glowing acrylic LED night light." />
 
-  <!-- Schema.org LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +42,6 @@
   }
   </script>
 
-  <!-- Schema.org Product -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,8 +57,10 @@
     }
   }
   </script>
+
   <link rel="preload" as="image" href="assets/logos/lumi-web-banner.png">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -72,20 +70,14 @@
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Navigation -->
   <nav class="site-nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="LED62 — Home"><img src="assets/logos/logo-white.svg" alt="LED62" height="42"></a>
-
-      <button class="nav-toggle"
-              aria-expanded="false"
-              aria-controls="nav-links"
-              aria-label="Open navigation menu">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
         <span></span><span></span><span></span>
       </button>
-
       <ul class="nav-links" id="nav-links" role="list">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="custom.html">Custom</a></li>
         <li><a href="https://led62.square.site">Shop All</a></li>
         <li><a href="contact.html">Contact Us</a></li>
@@ -96,56 +88,47 @@
 
   <main id="main-content">
 
-    <!-- Lumi Banner -->
     <div class="lumi-banner" role="banner" aria-label="Lumi LED Lights">
       <div class="lumi-banner-inner">
         <p class="lumi-title">LUMI <span>LED LIGHTS</span></p>
         <a href="https://led62.square.site" class="lumi-btn">Shop Now</a>
-        </div>
+      </div>
     </div>
 
-    <!-- Hero -->
     <section class="hero" aria-labelledby="hero-heading">
-    <div class="container">
+      <div class="container">
         <div class="hero-split">
-        <div class="hero-text">
+          <div class="hero-text">
             <h1 id="hero-heading">Custom LED Night Lights<br><span class="hero-h1-sub">Personalized Acrylic LED Lights</span></h1>
             <p class="hero-subtitle">Turn any photo, logo, or design into a laser-engraved acrylic LED light. Perfect as a night light, a unique gift, or a stunning piece of décor.</p>
             <div class="hero-ctas">
-            <a href="custom.html" class="btn btn-pink">Order Custom</a>
-            <a href="https://led62.square.site" class="btn btn-outline">Shop Pre-Made</a>
+              <a href="custom.html" class="btn btn-pink">Order Custom</a>
+              <a href="https://led62.square.site" class="btn btn-outline">Shop Pre-Made</a>
             </div>
-        </div>
-        <div class="hero-image">
-            <img
-              src="assets/photos/dallas-acrylic.webp"
-              alt="Custom LED night light"
-              fetchpriority="high"
-              loading="eager"
-            />
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <!-- Limitless Possibilities -->
-    <section class="section base-section" aria-labelledby="possibilities-heading">
-      <div class="container">
-        <div class="possibilities-centered">
-          <h2 id="possibilities-heading">LIMITLESS POSSIBILITIES.</h2>
-          <p>From anime characters to family photos, sports logos to original artwork — if you can imagine it, we can light it up.</p>
-          <a href="https://led62.square.site" target="_blank" class="btn btn-outline">ORDER NOW</a>
-          <div class="possibilities-row">
-            <img src="assets/photos/miami-heat.webp" alt="Miami Heat custom LED light" />
-            <img src="assets/photos/gengar.webp" alt="Gengar custom LED light" />
-            <img src="assets/photos/hello-kitty.webp" alt="Hello Kitty custom LED light" />
-            <img src="assets/photos/cat.webp" alt="Cat custom LED light" />
+          </div>
+          <div class="hero-image">
+            <img src="assets/photos/dallas-acrylic.webp" alt="Custom LED night light" fetchpriority="high" loading="eager" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- How It Works -->
+    <section class="section base-section" aria-labelledby="possibilities-heading">
+      <div class="container">
+        <div class="possibilities-centered">
+          <h2 id="possibilities-heading">LIMITLESS POSSIBILITIES.</h2>
+          <p>From anime characters to family photos, sports logos to original artwork — if you can imagine it, we can light it up.</p>
+          <a href="https://led62.square.site" class="btn btn-outline">ORDER NOW</a>
+          <div class="possibilities-row">
+            <img src="assets/photos/miami-heat.webp" alt="Miami Heat custom LED light" width="157" height="220" loading="lazy" />
+            <img src="assets/photos/gengar.webp" alt="Gengar custom LED light" width="190" height="220" loading="lazy" />
+            <img src="assets/photos/hello-kitty.webp" alt="Hello Kitty custom LED light" width="141" height="220" loading="lazy" />
+            <img src="assets/photos/cat.webp" alt="Cat custom LED light" width="121" height="220" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" aria-labelledby="how-heading">
       <div class="container">
         <h2 id="how-heading" class="text-center mb-4">HOW IT WORKS</h2>
@@ -153,8 +136,7 @@
           Creating your own Lumi LED night light has never been easier.
         </p>
 
-        <!-- Step 1 — Car example -->
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-bottom:3rem;">
+        <div class="how-it-works-grid">
           <ol class="steps" aria-label="How to order a custom LED light">
             <li class="step-item">
               <div class="step-number" aria-hidden="true">1</div>
@@ -179,53 +161,21 @@
             </li>
           </ol>
 
-          <div>
-            <div class="ba-pair" style="margin-bottom:1.5rem;">
-              <img
-                src="assets/photos/car-og.webp"
-                alt="Original photo of a car used to create a custom LED light"
-                width="200" height="178" loading="lazy"
-                style="width:200px; height:auto;"
-              />
-              <span class="ba-arrow" aria-hidden="true">→</span>
-              <img
-                src="assets/photos/car-lumi.webp"
-                alt="Finished custom LED light engraved with the car photo"
-                width="200" height="200" loading="lazy"
-                style="width:200px; height:auto;"
-              />
-            </div>
-
-            <div class="ba-pair" style="margin-bottom:1.5rem;">
-              <img
-                src="assets/photos/dogs-og.jpg"
-                alt="Original photo of two dogs used to create a custom LED light"
-                width="200" height="150" loading="lazy"
-                style="width:200px; height:auto;"
-              />
-              <span class="ba-arrow" aria-hidden="true">→</span>
-              <img
-                src="assets/photos/dogs-lumi.png"
-                alt="Finished custom LED light engraved with two dogs"
-                width="180" height="194" loading="lazy"
-                style="width:180px; height:auto;"
-              />
-            </div>
-
+          <div class="ba-stack">
             <div class="ba-pair">
-              <img
-                src="assets/photos/bartow-og.png"
-                alt="Original police badge logo used to create a custom LED light"
-                width="130" height="187" loading="lazy"
-                style="width:130px; height:auto;"
-              />
+              <img src="assets/photos/car-og.webp" alt="Original photo of a car used to create a custom LED light" loading="lazy" style="height:150px;width:auto;" />
               <span class="ba-arrow" aria-hidden="true">→</span>
-              <img
-                src="assets/photos/bartow-lumi.png"
-                alt="Finished custom LED light with police badge design"
-                width="200" height="200" loading="lazy"
-                style="width:200px; height:auto;"
-              />
+              <img src="assets/photos/car-lumi.webp" alt="Finished custom LED light engraved with the car photo" loading="lazy" style="height:150px;width:auto;" />
+            </div>
+            <div class="ba-pair">
+              <img src="assets/photos/dogs-og.jpg" alt="Original photo of two dogs used to create a custom LED light" loading="lazy" style="height:150px;width:auto;" />
+              <span class="ba-arrow" aria-hidden="true">→</span>
+              <img src="assets/photos/dogs-lumi.png" alt="Finished custom LED light engraved with two dogs" loading="lazy" style="height:150px;width:auto;" />
+            </div>
+            <div class="ba-pair">
+              <img src="assets/photos/bartow-og.png" alt="Original police badge logo used to create a custom LED light" loading="lazy" style="height:150px;width:auto;" />
+              <span class="ba-arrow" aria-hidden="true">→</span>
+              <img src="assets/photos/bartow-lumi.png" alt="Finished custom LED light with police badge design" loading="lazy" style="height:150px;width:auto;" />
             </div>
           </div>
         </div>
@@ -236,7 +186,6 @@
       </div>
     </section>
 
-    <!-- Base Features -->
     <section class="section base-section" aria-labelledby="base-heading">
       <div class="container">
         <div class="base-grid">
@@ -244,11 +193,7 @@
             <h4>LIGHT IT UP</h4>
             <h2 id="base-heading">Easy to Use Base</h2>
             <span class="tagline">Plug it in, or use three AA batteries</span>
-            <p>
-              Every Lumi LED light comes with a color-changing LED base, micro-USB cable, and remote control. 
-              Setup takes seconds — just place your acrylic design in the base and power it on.
-            </p>
-
+            <p>Every Lumi LED light comes with a color-changing LED base, micro-USB cable, and remote control. Setup takes seconds — just place your acrylic design in the base and power it on.</p>
             <div class="base-specs" role="list">
               <div class="base-spec" role="listitem">
                 <div>
@@ -270,14 +215,8 @@
               </div>
             </div>
           </div>
-
           <div class="base-images">
-            <img
-              src="assets/photos/Base.jpeg"
-              alt="The LED light base unit, cable, and remote"
-              width="500"
-              loading="lazy"
-            />
+            <img src="assets/photos/Base.jpeg" alt="The LED light base unit, cable, and remote" width="500" loading="lazy" />
           </div>
         </div>
       </div>
@@ -285,7 +224,7 @@
 
   </main>
 
-  <!-- Footer -->
+<!-- Footer -->
     <footer class="site-footer" role="contentinfo">
       <div class="container">
         <div class="footer-inner">
