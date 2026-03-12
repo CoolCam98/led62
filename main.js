@@ -66,25 +66,12 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 // ---- Contact Form ----
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  contactForm.addEventListener('submit', (e) => {
     const btn = contactForm.querySelector('[type="submit"]');
-    const orig = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Sending…';
-
-    // TODO: Replace with Formspree, EmailJS, or your backend endpoint
-    // Example with Formspree:
-    // const res = await fetch('https://formspree.io/f/YOUR_ID', {
-    //   method: 'POST', body: new FormData(contactForm),
-    //   headers: { Accept: 'application/json' }
-    // });
-    await new Promise(r => setTimeout(r, 1000)); // simulate
-    const msg = document.getElementById('form-success');
-    if (msg) { msg.hidden = false; msg.focus(); }
-    contactForm.reset();
-    btn.textContent = orig;
-    btn.disabled = false;
+    // Let the form submit naturally to Netlify
+    // The success message is handled by Netlify's redirect
   });
 }
 
