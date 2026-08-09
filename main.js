@@ -75,6 +75,42 @@ if (contactForm) {
   });
 }
 
+// ---- Order Form ----
+const orderForm = document.getElementById('order-form');
+if (orderForm) {
+  const successEl = document.getElementById('order-form-success');
+  const errorEl   = document.getElementById('order-form-error');
+  const submitBtn = orderForm.querySelector('[type="submit"]');
+
+  orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!orderForm.reportValidity()) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting…';
+    if (errorEl) errorEl.hidden = true;
+
+    const formData = new FormData(orderForm);
+
+    fetch('/', {
+      method: 'POST',
+      body: formData,
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        orderForm.reset();
+        orderForm.hidden = true;
+        if (successEl) successEl.hidden = false;
+        if (successEl) successEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      })
+      .catch(() => {
+        if (errorEl) errorEl.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Order Request';
+      });
+  });
+}
+
 // ---- Scroll reveal ----
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
