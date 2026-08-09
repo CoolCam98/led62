@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BSRG8Q7QL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-4BSRG8Q7QL");
+    </script>
+  <title>Order Your Custom Light | LED62</title>
+  <meta name="description" content="Submit your custom LED light order with LED62. Enter your shipping details, upload your photo, logo, or design, and we'll review it before sending you a secure payment link." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.led62.com/order" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.led62.com/order" />
+  <meta property="og:title"       content="Order Your Custom Light | LED62" />
+  <meta property="og:description" content="Submit your shipping details and upload your file to start a custom Lumi LED light order." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="LED62 — Home">
+        <img src="assets/logos/logo-white.svg" alt="LED62" height="42">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="custom.html">Custom</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- Lumi Banner -->
+    <div class="lumi-banner" role="banner" aria-label="Order Your Custom Light">
+      <div class="lumi-banner-inner">
+        <h1 class="lumi-title">Order Your Custom Light</h1>
+      </div>
+    </div>
+
+    <!-- How ordering works -->
+    <section class="section" aria-labelledby="order-how-heading">
+      <div class="container">
+        <h2 id="order-how-heading" class="text-center mb-4">HOW ORDERING WORKS</h2>
+        <ol class="steps" aria-label="How the order process works">
+          <li class="step-item">
+            <div class="step-number" aria-hidden="true">1</div>
+            <div class="step-content">
+              <h3>Submit this form</h3>
+              <p>Tell us your shipping details and upload the photo, logo, or design file you'd like engraved. Have a discount code? Enter it below.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-number" aria-hidden="true">2</div>
+            <div class="step-content">
+              <h3>We review your file</h3>
+              <p>This is a form submission, not a payment — our team checks your file to make sure it will engrave clearly before anything is charged.</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-number" aria-hidden="true">3</div>
+            <div class="step-content">
+              <h3>We send you a payment link</h3>
+              <p>Once your file is approved, we'll email you a secure payment link. Your total will include shipping, which is the customer's responsibility.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Order Form -->
+    <section class="section section-alt" aria-labelledby="order-form-heading">
+      <div class="container">
+        <h2 id="order-form-heading" class="mb-4 text-center">YOUR ORDER DETAILS</h2>
+
+        <div style="max-width:640px; margin:0 auto;">
+
+          <div id="order-form-success" hidden role="alert" aria-live="polite" style="background:#e8f5e9; border:1px solid #a5d6a7; border-radius:6px; padding:1rem 1.25rem; margin-bottom:1.25rem; font-size:0.9rem; color:#2e7d32;">
+            Thanks! Your order request has been submitted. We'll review your file and email you a payment link once it's approved.
+          </div>
+          <div id="order-form-error" hidden role="alert" aria-live="polite" style="background:#fdecea; border:1px solid #f5b5ae; border-radius:6px; padding:1rem 1.25rem; margin-bottom:1.25rem; font-size:0.9rem; color:#b71c1c;">
+            Sorry, something went wrong submitting your order. Please try again or email us at <a href="mailto:led62.info@gmail.com" style="color:#b71c1c;">led62.info@gmail.com</a>.
+          </div>
+
+          <form id="order-form" name="order" method="POST" data-netlify="true" enctype="multipart/form-data" netlify-honeypot="bot-field" novalidate aria-label="Custom light order form">
+            <input type="hidden" name="form-name" value="order" />
+            <input type="hidden" name="bot-field" />
+
+            <h3 class="mb-2">Contact Info</h3>
+            <div class="form-group">
+              <label for="order-name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="order-name" name="name" class="form-control" placeholder="Your full name" required autocomplete="name" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="order-email">Email <span aria-hidden="true">*</span></label>
+              <input type="email" id="order-email" name="email" class="form-control" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
+              <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.35rem;">We'll send your payment link to this address once your file is approved.</p>
+            </div>
+            <div class="form-group">
+              <label for="order-phone">Phone (optional)</label>
+              <input type="tel" id="order-phone" name="phone" class="form-control" placeholder="(555) 555-5555" autocomplete="tel" />
+            </div>
+
+            <h3 class="mb-2 mt-4">Shipping Address</h3>
+            <div class="form-group">
+              <label for="order-address1">Street Address <span aria-hidden="true">*</span></label>
+              <input type="text" id="order-address1" name="address_line1" class="form-control" placeholder="Street address" required autocomplete="address-line1" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="order-address2">Apt / Suite (optional)</label>
+              <input type="text" id="order-address2" name="address_line2" class="form-control" placeholder="Apt, suite, unit, etc." autocomplete="address-line2" />
+            </div>
+            <div class="form-group">
+              <label for="order-city">City <span aria-hidden="true">*</span></label>
+              <input type="text" id="order-city" name="city" class="form-control" placeholder="City" required autocomplete="address-level2" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="order-state">State <span aria-hidden="true">*</span></label>
+              <input type="text" id="order-state" name="state" class="form-control" placeholder="State" required autocomplete="address-level1" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="order-zip">ZIP / Postal Code <span aria-hidden="true">*</span></label>
+              <input type="text" id="order-zip" name="zip" class="form-control" placeholder="ZIP code" required autocomplete="postal-code" aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="order-country">Country <span aria-hidden="true">*</span></label>
+              <input type="text" id="order-country" name="country" class="form-control" placeholder="Country" value="United States" required autocomplete="country-name" aria-required="true" />
+            </div>
+            <p style="font-size:0.8rem; color:var(--text-light); margin-top:-0.75rem; margin-bottom:1.25rem;">
+              Shipping cost is not included and will be added to your payment link total.
+            </p>
+
+            <h3 class="mb-2 mt-4">Your File</h3>
+            <div class="form-group">
+              <label for="order-file">Upload Photo, Logo, or Design <span aria-hidden="true">*</span></label>
+              <input type="file" id="order-file" name="design_file" class="form-control" accept=".jpg,.jpeg,.png,.gif,.svg,.ai,.pdf,.eps" required aria-required="true" />
+              <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.35rem;">
+                See our <a href="custom.html" style="color:var(--accent);">submission guidelines</a> for accepted file types. Max file size 10MB.
+              </p>
+            </div>
+            <div class="form-group">
+              <label for="order-notes">Order Notes (optional)</label>
+              <textarea id="order-notes" name="notes" class="form-control" placeholder="Light type, size, color preferences, or anything else we should know"></textarea>
+            </div>
+
+            <h3 class="mb-2 mt-4">Discount Code</h3>
+            <div class="form-group">
+              <label for="order-discount">Discount Code (optional)</label>
+              <input type="text" id="order-discount" name="discount_code" class="form-control" placeholder="Enter code if you have one" autocomplete="off" />
+            </div>
+
+            <button type="submit" class="btn btn-pink mt-2">Submit Order Request</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Left: Contact -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <a href="mailto:led62.info@gmail.com">led62.info@gmail.com</a>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.instagram.com/led62fl/" aria-label="LED62 on Instagram" rel="noopener noreferrer" target="_blank">
+              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/LED62FL/" aria-label="LED62 on Facebook" rel="noopener noreferrer" target="_blank">
+              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Email signup -->
+        <div class="footer-signup">
+          <h4>Stay in the Loop</h4>
+          <form name="email-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="footer-form">
+            <input type="hidden" name="form-name" value="email-signup" />
+            <input type="hidden" name="bot-field" />
+            <input type="email" name="email" placeholder="Your email address" required aria-label="Email address" />
+            <button type="submit" class="btn btn-pink">Subscribe</button>
+          </form>
+          <p>New designs, deals, and updates straight to your inbox.</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> LED62. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
