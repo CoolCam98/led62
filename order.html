@@ -14,12 +14,16 @@
   <title>Order Your Custom Light | LED62</title>
   <meta name="description" content="Submit your custom LED light order with LED62. Enter your shipping details, upload your photo, logo, or design, and we'll review it before sending you a secure payment link." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.led62.com/order" />
+  <link rel="canonical" href="https://led62.com/order" />
 
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://www.led62.com/order" />
+  <meta property="og:url"         content="https://led62.com/order" />
   <meta property="og:title"       content="Order Your Custom Light | LED62" />
   <meta property="og:description" content="Submit your shipping details and upload your file to start a custom Lumi LED light order." />
+  <meta property="og:image"       content="https://led62.com/assets/og-image.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Lumi LED Lights — a red custom acrylic LED light engraved with a classic car" />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mobile.css" />
@@ -153,17 +157,26 @@
               Shipping cost is not included and will be added to your payment link total.
             </p>
 
-            <h3 class="mb-2 mt-4">Your File</h3>
+            <h3 class="mb-2 mt-4">Your Light</h3>
+            <div class="form-group">
+              <label for="order-type">Light Type <span aria-hidden="true">*</span></label>
+              <select id="order-type" name="light_type" class="form-control" required aria-required="true">
+                <option value="">Choose one</option>
+                <option value="Photo">Custom photo light</option>
+                <option value="Logo">Custom logo light</option>
+                <option value="Design">Custom design light</option>
+              </select>
+            </div>
             <div class="form-group">
               <label for="order-file">Upload Photo, Logo, or Design <span aria-hidden="true">*</span></label>
-              <input type="file" id="order-file" name="design_file" class="form-control" accept=".jpg,.jpeg,.png,.gif,.svg,.ai,.pdf,.eps" required aria-required="true" />
+              <input type="file" id="order-file" name="design_file" class="form-control" accept=".jpg,.jpeg,.png,.gif,.webp,.heic,.heif,.svg,.ai,.pdf,.eps" required aria-required="true" />
               <p style="font-size:0.8rem; color:var(--text-light); margin-top:0.35rem;">
-                See our <a href="custom.html" style="color:var(--accent);">submission guidelines</a> for accepted file types. Max file size 10MB.
+                See our <a href="custom.html" style="color:var(--accent);">submission guidelines</a> for accepted file types. Max file size 8MB.
               </p>
             </div>
             <div class="form-group">
               <label for="order-notes">Order Notes (optional)</label>
-              <textarea id="order-notes" name="notes" class="form-control" placeholder="Light type, size, color preferences, or anything else we should know"></textarea>
+              <textarea id="order-notes" name="notes" class="form-control" placeholder="Preferred size, color preferences, or anything else we should know"></textarea>
             </div>
 
             <h3 class="mb-2 mt-4">Discount Code</h3>

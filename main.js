@@ -6,44 +6,48 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks  = document.querySelector('.nav-links');
 
+function setNav(open) {
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  navLinks.classList.toggle('open', open);
+}
+
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', (e) => {
     e.stopPropagation();
     const open = navToggle.getAttribute('aria-expanded') === 'true';
-    navToggle.setAttribute('aria-expanded', String(!open));
-    navLinks.classList.toggle('open', !open);
+    setNav(!open);
   });
 
   // Close when a nav link is clicked (useful on mobile SPA-style)
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('open');
+      setNav(false);
     });
   });
 
   // Close on outside click
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.site-nav')) {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('open');
+      setNav(false);
     }
   });
 
   // Close on Escape
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      navToggle.setAttribute('aria-expanded', 'false');
-      navLinks.classList.remove('open');
+    if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+      setNav(false);
       navToggle.focus();
     }
   });
 }
 
 // ---- Active nav link ----
-const page = window.location.pathname.split('/').pop() || 'index.html';
+// Netlify serves clean URLs (/about), while nav links point to about.html
+const pageName = (p) => (p.split('/').pop() || 'index').replace(/\.html$/, '');
+const page = pageName(window.location.pathname);
 document.querySelectorAll('.nav-links a').forEach(a => {
-  if (a.getAttribute('href') === page) a.setAttribute('aria-current', 'page');
+  if (pageName(a.getAttribute('href')) === page) a.setAttribute('aria-current', 'page');
 });
 
 // ---- FAQ Accordion ----
@@ -77,7 +81,11 @@ if (contactForm) {
 
 // ---- Order Form ----
 const orderForm = document.getElementById('order-form');
+const MAX_UPLOAD_BYTES = 7.5 * 1024 * 1024; // leaves room for the other form fields
 if (orderForm) {
+  const orderFile = orderForm.querySelector('#order-file');
+  if (orderFile) orderFile.addEventListener('change', () => orderFile.setCustomValidity(''));
+
   const successEl = document.getElementById('order-form-success');
   const errorEl   = document.getElementById('order-form-error');
   const submitBtn = orderForm.querySelector('[type="submit"]');
@@ -85,6 +93,15 @@ if (orderForm) {
   orderForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!orderForm.reportValidity()) return;
+
+    // Netlify rejects form submissions over 8MB total
+    const fileInput = orderForm.querySelector('#order-file');
+    const file = fileInput && fileInput.files[0];
+    if (file && file.size > MAX_UPLOAD_BYTES) {
+      fileInput.setCustomValidity('This file is over 8MB. Please upload a smaller version, or email it to us at led62.info@gmail.com.');
+      fileInput.reportValidity();
+      return;
+    }
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Submitting…';
