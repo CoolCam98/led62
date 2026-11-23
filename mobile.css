@@ -25,6 +25,14 @@
     width: auto;
   }
 
+  /* The rule above would collapse the nav logo to 0x0 — keep it visible */
+  .nav-logo { flex-shrink: 0; }
+  .nav-logo img {
+    height: 44px !important;
+    width: auto;
+    max-width: none;
+  }
+
   .section    { padding: 2rem 0; }
   .section-sm { padding: 1.25rem 0; }
   .section-lg { padding: 2.5rem 0; }

@@ -1,5 +1,37 @@
+# Old URLs from the previous site -> current pages
+[[redirects]]
+  from = "/about-us"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/shop-all"
+  to = "/custom"
+  status = 301
+
+[[redirects]]
+  from = "/shop"
+  to = "/custom"
+  status = 301
+
+[[redirects]]
+  from = "/product-page/*"
+  to = "/custom"
+  status = 301
+
 [[redirects]]
   from = "/p/*"
-  to = "/product.html"
-  status = 200
-  
+  to = "/custom"
+  status = 301
+
+# Send www to the bare domain
+[[redirects]]
+  from = "https://www.led62.com/*"
+  to = "https://led62.com/:splat"
+  status = 301
+  force = true
